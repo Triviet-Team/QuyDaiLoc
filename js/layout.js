@@ -55,28 +55,21 @@ $('.main-image').bind('click', function () {
 
 
 $('.construction-carousel').owlCarousel({
-  loop: true,
-  autoplayTimeout: 3000,
-  autoplay: true,
+  loop: false,
+  autoplay: false,
   dots: false,
-  nav: true,
+  nav: false,
   items: 3,
   margin: 30,
-  autoplaySpeed: 1000,
-  autoplayHoverPause: true,
-  navText: [
-    "<i class='mdi mdi-arrow-left'></i>", 
-    "<i class='mdi mdi-arrow-right'></i>"
-  ],
   responsive : {
     0 : {
       items: 1,
     },
     575 : {
-      items: 1
+      items: 2
     },
     992 : {
-      items: 2, 
+      items: 3, 
     },
   }
 });
@@ -86,11 +79,16 @@ $('.construction-carousel').owlCarousel({
 // ANIMATION
 wow = new WOW(
   {
-  mobile: false,
+  mobile: true,
   }
 )
 wow.init();
 $('.wow').attr('data-wow-duration','.5s')
+
+$('.box-product-detail-price')
+  .addClass('wow heartBeat')
+  .attr('data-wow-duration','1.5s')
+  .attr('data-wow-iteration', '5000')
 
 
 $(document).ready(() => {
@@ -175,6 +173,31 @@ $(document).ready(() => {
     $('.search-btn i').toggleClass('mdi-magnify mdi-close')
     $('.search-form').toggleClass('active');
     $('.search-form input').focus();
+  });
+
+  $('.cart-btn').click(() => {
+    $('.overlay').addClass('overlay-in');
+    $('.cart').toggleClass('cart-out');
+  });
+
+  
+  $(".quantity button").on("click", function() {
+
+    let $button = $(this);
+    let oldValue = $button.parent().find("input").val();
+  
+    if ($button.text() == "+") {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+     // Don't allow decrementing below zero
+      if (oldValue > 1) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 1;
+      }
+    }
+  
+    $button.parent().find("input").val(newVal);
   });
 
 
