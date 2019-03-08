@@ -1,0 +1,350 @@
+@import 'default';
+$main_color: #128DE0;
+
+@mixin o1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@mixin o2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@mixin o3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@mixin o4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+// end default css -----------------------------------------------------
+
+.menu {
+  position: fixed;
+  width: 100%;
+  background: white;
+  top: 0;
+  right: 15px;
+  z-index: 1000;
+  height: 100px;
+  box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+  transition: .3s;
+
+  &.down {
+    height: 60px;
+
+    .logo {
+      img {
+        height: 40px;
+        transition: .3s;
+      }
+    }
+
+    .main-menu .nav {
+      margin: 15px 0;
+    }
+
+    .search .search-btn {
+      margin: 10px 0;
+    }
+
+    .search-form {
+      top: 10px;
+    }
+  }
+
+  .logo {
+    margin: 10px 0;
+
+    img {
+      height: 80px;
+      transition: .3s;
+    }
+  }
+
+  .main-menu {
+    position: relative;
+    text-align: center;
+
+    .toggleMenu {
+      cursor: pointer;
+      display: none;
+      color: black;
+      margin: 10px 0;
+      z-index: 10000;
+
+      i {
+        font-size: 26px;
+      }
+    }
+
+    .nav {
+      display: block;
+      margin: 35px 0;
+      transition: .3s;
+
+      .menu-down {
+        width: 80%;
+        background: white;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+        position: fixed;
+        top: 100px;
+        left: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px solid #e1e1e1;
+        padding: 30px;
+        padding-bottom: 15px;
+        transform: translateY(-50%) scaleY(0);
+        transition: .3s;
+        transition-delay: .3s;
+
+        &.down {
+          top: 60px;
+        }
+
+        .box-menu {
+          text-align: left;
+          margin-bottom: 15px;
+
+          h4 {
+            margin-bottom: 20px;
+
+            a {
+              font-weight: 600;
+              text-transform: uppercase;
+              transition: .3s;
+              @include o1;
+
+              &:hover {
+                color: $main_color;
+              }
+            }
+
+            i {
+              position: absolute;
+              top: -6px;
+              right: 0;
+            }
+          }
+
+          li {
+            padding: 0;
+            display: block;
+            margin-bottom: 15px;
+
+            a {
+              font-size: 14px;
+              text-transform: capitalize;
+              font-weight: 400;
+              color: #585858;
+              @include o1;
+
+              &:hover {
+                color: $main_color;
+              }
+            }
+          }
+        }
+      }
+
+      li {
+        padding: 0 15px;
+        transition: .5s;
+        display: inline-block;
+
+        &:hover {
+          .menu-down {
+            transform: none;
+            transition: .3s;
+          }
+        }
+
+        i {
+          padding-left: 5px;
+          font-size: 20px;
+        }
+
+        .active {
+          color: $main_color;
+        }
+
+        a {
+          font-weight: bold;
+          font-size: 16px;
+          text-transform: uppercase;
+          transition: .3s;
+          padding: 0;
+
+          &:hover {
+            color: $main_color;
+
+          }
+        }
+
+      }
+    }
+  }
+
+  .search {
+    float: right;
+    z-index: 2;
+    position: relative;
+
+    .search-btn {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      background: $main_color;
+      color: white;
+      cursor: pointer;
+      border-radius: 50%;
+      margin: 30px 0;
+      font-size: 20px;
+      transition: .3s;
+    }
+  }
+
+  .search-form {
+    position: fixed;
+    right: 45px;
+    top: 30px;
+    width: 40px;
+    transition: width .3s ease-in-out;
+
+    &.active {
+      width: auto;
+
+      input {
+        display: block;
+        width: 400px;
+        opacity: 1;
+        transition: width .3s ease-in-out;
+      }
+
+      button {
+        opacity: 1;
+        transition: .3s;
+      }
+    }
+
+    form {
+      position: relative;
+    }
+    
+    input {
+      height: 40px;
+      border-radius: 40px;
+      padding-left: 40px;
+      width: 0;
+      opacity: 0;
+      transition: width .3s ease;
+      border-right: 0;
+
+      &:focus {
+        box-shadow: none;
+        border: 1px solid $main_color;
+      }
+    }
+
+    button {
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      background: none;
+      color: #585858;
+      border: 0;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+
+      &:hover {
+        color: $main_color;
+      }
+    }
+  }
+}
+
+.title-page {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(transparent, transparent), url('../img/iconbox-bg.gif');
+    background-position: left;
+    background-size: 125%;
+    text-align: center;
+
+    &::before {
+      width: 100%;
+      height: 1px;
+      background: black;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.slider {
+  .owl-theme .owl-nav {
+
+    button.owl-prev,
+    button.owl-next {
+      position: absolute;
+      top: 52%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      transition: .3s;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid white;
+      line-height: 36px;
+
+      &:hover {
+        background: $main_color;
+        border-color: $main_color;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button.owl-prev {
+      left: 2%;
+    }
+
+    button.owl-next {
+      right: 2%;
+    }
+  }
+}
+
+
+// --------------------------------------------------------------------
+@import 'media';
