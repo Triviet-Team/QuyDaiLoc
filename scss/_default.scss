@@ -302,8 +302,9 @@ body {
   color: black;
   margin-bottom: 30px;
   text-align: left;
-  margin-top: 10px;
-  padding-top: 100px;
+  padding-top: 15px;
+  border-top: 1px solid #e1e1e1;
+  margin-top: -1px;
 
   .breadcrumb {
     background: none;
@@ -338,337 +339,6 @@ article {
   padding-top: 100px;
 }
 
-.cart {
-  width: 400px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: white;
-  z-index: 1001;
-  transform: translateX(100%);
-  transition: .3s;
-  display: grid;
-  grid-template-rows: 100px calc(100% - 160px) 60px;
-
-  &.cart-out {
-    transform: none;
-  }
-
-  &-header {
-    padding: 30px 20px;
-    background: $main_color;
-    color: white;
-    
-    h3 {
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    i {
-      font-size: 24px;
-      margin-top: -10px;
-
-      &.cart-close {
-        cursor: pointer;
-        transition: .5s;
-
-        &:hover {
-          color: black;
-        }
-      }
-    }
-
-    span {
-      position: absolute;
-      background: black;
-      font-size: 10px;
-      width: 15px;
-      height: 15px;
-      line-height: 15px;
-      text-align: center;
-      border-radius: 50%;
-      bottom: 0;
-      margin-left: -10px;
-    }
-  }
-
-  &-body {
-    padding: 15px;
-    max-height: 100%;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
-    
-    &::-webkit-scrollbar-track {
-      background: #f1f1f1; 
-    }
-     
-    &::-webkit-scrollbar-thumb {
-      background: #888; 
-    }
-    
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555; 
-    }
-
-    .box-product-cart {
-      display: flex;
-      border-bottom: 1px solid #e1e1e1;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-
-      img {
-        width: 100px;
-        height: 100px;
-        margin-right: 10px;
-      }
-
-      &-detail {
-        h5 {
-          margin-bottom: 5px;
-
-          a {
-            font-weight: 500;
-            transition: .2s;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-
-            &:hover {
-              color: $main_color;
-            }
-          }
-        }
-
-        .quantity {
-          input {
-            background: none;
-            border: 0;
-            width: 35px;
-            margin-left: 20px;
-            font-size: 14px;
-            margin-bottom: 5px;
-          }
-
-          button {
-            font-size: 14px;
-            cursor: pointer;
-            transition: .2s;
-            background: black;
-            border: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 3px;
-            color: white;
-            line-height: 19px;
-
-            &:hover {
-              background: $main_color;
-            }
-          }
-        }
-
-        h4 {
-          font-weight: bold;
-          color: $main_color;
-        }
-      }
-    }
-  }
-
-  &-footer {
-    z-index: 10;
-    background: white;
-    margin-top: 20px;
-
-    a {
-      padding: 7px 15px;
-      margin: 0 5px;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: 500;
-      background: #959595;
-      border: 2px solid #959595;
-      color: white;
-      font-size: 16px;
-      transition: .5s;
-
-      &:hover {
-        color: white;
-        border-color: $main_color;
-        background: $main_color;
-      }
-    }
-
-    a:nth-child(1) {
-      color: #5E5E5E;
-      background: none;
-
-      &:hover {
-        color: $main_color;
-      }
-    }
-  }
-}
-
-.quickview {
-  cursor: url('../img/cursor.png'), auto;
-
-  .modal-content {
-    cursor: default;
-
-    .modal-body {
-      img {
-        margin-bottom: -5px;
-      }
-
-      h2 {
-        font-weight: bold;
-        margin-bottom: 15px;
-      }
-
-      h5 {
-        margin-bottom: 15px;
-      }
-
-      h4 {
-        color: $main_color;
-        font-weight: bold;
-        margin-bottom: 15px;
-
-        span {
-          font-weight: 400;
-          color: #585858;
-          text-decoration: line-through;
-          margin-left: 20px;
-        }
-      }
-
-      p {
-        margin-bottom: 20px;
-        color: #656565;
-      }
-
-      input {
-        width: 40px;
-        height: 40px;
-        padding-left: 5px;
-        margin: 0 5px;
-        border: 1px solid #e1e1e1;
-        border-radius: 3px;
-        margin-bottom: 20px;
-        padding-top: 3px;
-      }
-
-      
-
-      .cart-btn {
-        border: 2px solid $main_color;
-
-        &:hover {
-          background: none;
-          border-color: black;
-        }
-      }
-
-      .xzoom-thumbs {
-        a {
-          background: none;
-          margin: 1px;
-        }
-
-        .xactive {
-          border: 1px solid $main_color;
-        }
-      }
-
-
-      .tags {
-        padding-top: 10px;
-        margin-top: 10px;
-        border-top: 1px solid #e1e1e1;
-      }
-    }
-  }
-
-  .quantity {
-    span {
-      margin-right: 5px;
-    }
-
-    input {
-      background: none;
-      border: 0;
-      width: 35px;
-      margin-left: 20px;
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    button {
-      font-size: 14px;
-      cursor: pointer;
-      transition: .2s;
-      background: black;
-      border: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 3px;
-      color: white;
-      line-height: 19px;
-
-      &:hover {
-        background: $main_color;
-      }
-    }
-    
-    button.custom-cart {
-      background: $main_color;
-      border: 0;
-      padding: 0 14px;
-      height: 40px;
-      width: auto;
-      text-transform: uppercase;
-      line-height: 40px;
-      font-weight: 500;
-      cursor: pointer;
-      border-radius: 3px;
-      transition: .5s;
-      border: 1px solid $main_color;
-      margin-left: 10px;
-
-      &:hover {
-        color: $main_color;
-        background: none;
-      }
-    }
-
-    .custom-wishlist {
-      background: white;
-      margin-left: 5px;
-      border: 1px solid white;
-
-      &:hover {
-        border-color: $main_color;
-      }
-    }
-  }
-
-  .tags {
-    span a {
-      color: $main_color;
-      
-      &:hover {
-        text-decoration: underline;
-        
-      }
-    }
-  }
-}
 
 .modal-img {
   position: relative;
@@ -707,126 +377,50 @@ article {
 
 
 .footer {
-  background-image: url('../img/bg-footer.png');
-  background-position: center;
-  background-size: cover;
-  color: white;
+  background: #f4f4f4;
+  color: #585858;
+  padding-top: 30px;
 
   h4 {
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  .footer-1 {
-    .footer-top-1 {
-      display: flex;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #383838;
-      height: 100px;
-
-      i {
-        font-size: 60px;
-        margin-right: 10px;
-        color: $main_color;
-      }
-
-      h4 {
-        margin-top: 25px;
-      }
-
-      a {
-        transition: .3s;
-
-        &:hover {
-          color: $main_color;
-
-          i {
-            color: $main_color;
-          }
-        }
-
-        i {
-          font-size: 14px;
-          color: white;
-          transition: .3s;
-        }
-      }
-    } 
-  }
-  
-  .footer-2 {
     margin-bottom: 20px;
-    border-bottom: 1px solid #383838;
-    height: 100px;
-    
-    h4 {
-      padding-top: 25px;
+    font-weight: bold;
+    color: black;
+  }
+
+  ul li {
+    margin-bottom: 15px;
+
+    &:hover {
+      color: $main_color;
     }
 
     i {
-      font-size: 30px;
       margin-right: 10px;
+      color: $main_color;
+    }
+  }
+
+  h5 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+
+  .footer-bot {
+    padding: 15px 0;
+    margin-top: 15px;
+    border-top: 1px solid #cccccc;
+
+    i {
+      font-size: 20px;
+      margin-left: 10px;
+      color: #585858;
       transition: .3s;
 
       &:hover {
         color: $main_color;
       }
-    }
-  }
-
-  .footer-bottom {
-    margin-bottom: 20px;
-
-    h4 {
-      margin-bottom: 20px;
-    }
-
-    ul {
-      li {
-        margin-bottom: 15px;
-        color: #ccc;
-        font-size: 14px;
-
-        a {
-          color: #cccccc;
-          transition: .3s;
-
-          &:hover {
-            color: $main_color;
-          }
-        }
-
-        i {
-          color: $main_color;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
-
-  .footer-bot {
-    padding: 15px 0;
-    border-top: 1px solid #383838;
-
-    h4 {
-      margin-bottom: 10px;
-    }
-
-    ul li {
-      display: inline-block;
-      margin-right: 15px;
-      padding-right: 15px;
-      border-right: 1px solid #666;
-
-      &:last-child {
-      margin-right: 0;
-      padding-right: 0;
-      border-right: 0;
-      }
-    }
-
-    h5 {
-      margin-top: 15px;
     }
   }
 }
@@ -877,7 +471,7 @@ article {
       color: black;
 
       img {
-        width: 100px;
+        height: 100px;
         float: left;
         margin-right: 10px;
       }

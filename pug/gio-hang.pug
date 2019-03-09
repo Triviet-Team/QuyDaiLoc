@@ -1,0 +1,113 @@
+extends _inc
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item.active Giỏ hàng
+
+    section.cart-page
+      .container
+        .row
+          .col-xl-9.col-lg-8
+            .cart-page-product
+              .table-responsive
+                table.table.table-bordered
+                  thead
+                    tr
+                      th(scope='col') Sản phẩm
+                      th(scope='col') Giá
+                      th(scope='col') Số lượng
+                      th(scope='col') Thành tiền
+                  tbody
+                    tr
+                      td.cart-page-product-1
+                        img(src='../img/product-1.png', alt='')
+                        h5
+                          a(href='chi-tiet-san-pham.html') Logitech G502 Proteus Spectrum
+                        h4 Loại: 304
+                        .cart-remove
+                          a(title='Xóa sản phẩm', href='#')
+                            i.mdi.mdi-close
+                      td
+                        h4 1.699.000 đ
+                      td.quantity
+                        button.waves-effect.waves-light -
+                        input(type='number', value='1', min='1')
+                        button.waves-effect.waves-light +
+                      td.cart-page-product-3
+                        h4 1.699.000 đ
+                    tr
+                      td.cart-page-product-1
+                        img(src='../img/product-1.png', alt='')
+                        h5
+                          a(href='chi-tiet-san-pham.html') Logitech G502 Proteus Spectrum
+                        h4 Loại: 304
+                        .cart-remove
+                          a(title='Xóa sản phẩm', href='#')
+                            i.mdi.mdi-close
+                      td
+                        h4 1.699.000 đ
+                      td.quantity
+                        button.waves-effect.waves-light -
+                        input(type='number', value='1', min='1')
+                        button.waves-effect.waves-light +
+                      td.cart-page-product-3
+                        h4 1.699.000 đ
+                    tr
+                      td.cart-page-product-1
+                        img(src='../img/product-1.png', alt='')
+                        h5
+                          a(href='chi-tiet-san-pham.html') Logitech G502 Proteus Spectrum
+                        h4 Loại: 304
+                        .cart-remove
+                          a(title='Xóa sản phẩm', href='#')
+                            i.mdi.mdi-close
+                      td
+                        h4 1.699.000 đ
+                      td.quantity
+                        button.waves-effect.waves-light -
+                        input(type='number', value='1', min='1')
+                        button.waves-effect.waves-light +
+                      td.cart-page-product-3
+                        h4 1.699.000 đ
+          .col-xl-3.col-lg-4
+            .cart-page-total
+              .cart-page-total-title
+                p TẠM TÍNH
+              p Ước tính vận chuyển
+              table.table.table-bordered
+                tbody
+                  tr
+                    td Tổng tiền
+                    td 1.999.000 đ
+                  tr
+                    td Phí vận chuyển
+                    td 20.000 đ
+                  tr
+                    td Tổng cộng
+                    td.total-over 2.999.000 đ
+              .cart-page-total-btn
+                button(type='submit')
+                  a(href='thanh-toan.html') tiến hành thanh toán
+        .row
+          .col-lg-5.col-md-4.text-center.text-md-left.order-md-0.order-12
+            .cart-page-btn
+              a(href='san-pham.html')
+                i.fa.fa-undo(aria-hidden='true')
+                |                                 Tiếp tục mua sắm
+          .col-lg-7.order-lg-3.col-md-8
+            .cart-page-btn.text-lg-right.text-md-right.text-center
+              button
+                a
+                  i.fa.fa-refresh(aria-hidden='true')
+                  |                                     Cập nhật giỏ hàng
+              button
+                a
+                  i.fa.fa-times(aria-hidden='true')
+                  |                                     Xóa giỏ hàng

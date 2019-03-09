@@ -1,0 +1,352 @@
+extends _inc
+
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item
+                a(href='san-pham.html') Sản phẩm
+              li.breadcrumb-item.active Trụ cầu thang
+    
+    section.product-page
+      .container
+        .left
+
+          .filter-color
+            h3 Lọc theo màu
+
+            label.check-box
+              | Màu đỏ
+              input(type='checkbox', checked='checked')
+              span.checkmark(style='background: red')
+            label.check-box
+              | Màu vàng
+              input(type='checkbox')
+              span.checkmark(style='background: yellow')
+            label.check-box
+              | Màu xanh lá cây
+              input(type='checkbox')
+              span.checkmark(style='background: green')
+            label.check-box
+              | Màu hồng
+              input(type='checkbox')
+              span.checkmark(style='background: pink')
+            label.check-box
+              | Màu cam
+              input(type='checkbox')
+              span.checkmark(style='background: orange')
+            label.check-box
+              | Màu đen
+              input(type='checkbox')
+              span.checkmark(style='background: black')
+          
+          .filter-done 
+            | Lọc sản phẩm
+            
+          .seller-product
+            h3 sản phẩm bán chạy
+
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-2.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-1.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-2.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-1.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-2.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+                
+            
+        .main
+          h2 Trụ cầu thang
+        
+          .main-product
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+            
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+            
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+            
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+            
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-2.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+            
+            .box-product
+              .box-product-status
+                span MỚI
+              .box-product-img
+                a(href='chi-tiet-san-pham.html')
+                  img(src='../img/product-1.png')
+                .box-product-img-custom
+                  a.custom-cart(title='Xem vào giỏ')
+                    i.mdi.mdi-cart
+              .box-product-detail.text-center
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                h3 
+                  span 201 
+                  .box-product-detail-price 250.000
+                h3 
+                  span 304 
+                  .box-product-detail-price 350.000
+            
+          .main-paging
+            nav
+              ul.pagination.justify-content-end
+                li.page-item
+                  a.page-link(href='#', aria-label='Previous')
+                    span(aria-hidden='true') «
+                    span.sr-only Previous
+                li.page-item
+                  a.page-link.active(href='#') 1
+                li.page-item
+                  a.page-link(href='#') 2
+                li.page-item
+                  a.page-link(href='#') 3
+                li.page-item
+                  a.page-link(href='#', aria-label='Next')
+                    span(aria-hidden='true') »
+                    span.sr-only Next  

@@ -36,6 +36,89 @@ $main_color: #128DE0;
 
 }
 
+@media (min-width: 1200px) {
+  .menu .main-menu {
+    .nav {
+      display: block;
+      transition: .3s;
+
+      li {
+        padding: 35px 15px;
+        transition: .3s;
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+          ul {
+            transform: none;
+            opacity: 1;
+            height: auto;
+            transition: .5s;
+
+            li {
+              display: block;
+            }
+          }
+        }
+
+        i {
+          padding-left: 5px;
+          font-size: 20px;
+        }
+
+        .active {
+          color: $main_color;
+        }
+
+        a {
+          font-weight: 500;
+          font-size: 16px;
+          transition: .3s;
+          padding: 0;
+
+          &:hover {
+            color: $main_color;
+
+          }
+        }
+
+        ul {
+          position: absolute;
+          width: 240px;
+          background: white;
+          top: 100px;
+          left: 0;
+          box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+          text-align: left;
+          transition: .5s;
+          transform: translateY(50px);
+          opacity: 0;
+          height: 0;
+
+          li {
+            padding: 0;
+            display: none;
+
+            a {
+              padding: 15px 20px;
+              width: 240px;
+              border-bottom: 1px solid #e1e1e1;
+              font-weight: 400;
+              text-transform: initial;
+              font-size: 14px;
+
+              &:hover {
+                color: white;
+                background: $main_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   body {
     margin-left: 15px;
@@ -57,17 +140,21 @@ $main_color: #128DE0;
     &.down {
       .main-menu .nav {
         margin: 0;
-        margin-top: -65px;
+        margin-top: -60px;
+
+        li ul {
+          top: 0;
+        }
       }
 
       .search .search-btn {
-        margin: 13px 0;
+        margin: 10px 0;
       }
     }
 
     .logo {
       height: 40px;
-      margin-right: -50px;
+      margin: 10px 0;
     }
 
     .main-menu {
@@ -81,7 +168,7 @@ $main_color: #128DE0;
         display: block; 
         position: absolute;
         right: 80px;
-        top: -63px;
+        top: -61px;
         z-index: 10;
         color: black;
       }
@@ -99,7 +186,7 @@ $main_color: #128DE0;
         position: absolute;
         width: 300px;
         transform: translate(-300px, 0);
-        margin-top: -65px;
+        margin-top: -60px;
         transition: .3s;
         height: 100vh;
         opacity: 0;
@@ -119,23 +206,37 @@ $main_color: #128DE0;
           display: block;
           padding: 15px 30px;
 
+          ul {
+            position: relative;
+            background: none;
+            color: white;
+            transform: none;
+            opacity: 1;
+            top: 0;
+            width: auto;
+            height: auto;
+            margin: -20px 0;
+
+            li {
+              padding: 0;
+              
+              a {
+                font-size: 14px;
+                font-weight: 400;
+                padding-bottom: 15px;
+                padding-left: 5px;
+                text-transform: initial;
+                color: #cccccc;
+              }
+            }
+          }
+
           &:first-child {
             margin-top: 30px;
           }
 
 
           &:hover {
-            .menu-down {
-              position: absolute;
-              top: 50px;
-              padding: 30px;
-              background: none;
-              display: block;
-              border: 0;
-              background: #111111;
-              left: 0;
-            }
-
             a {
               border-bottom: 0;
             }
@@ -147,6 +248,11 @@ $main_color: #128DE0;
             padding-bottom: 5px;
             font-weight: 500;
             font-size: 16px;
+            text-transform: uppercase;
+
+            &.active {
+              color: $main_color;
+            }
           }
 
           i {
@@ -160,7 +266,7 @@ $main_color: #128DE0;
       z-index: 15;
 
       .search-btn, .cart-btn {
-        margin: 13px 0;
+        margin: 10px 0;
         background: none;
         color: black;
         font-size: 26px;
@@ -170,7 +276,7 @@ $main_color: #128DE0;
 
     .search-form {
       top: 10px;
-      right: 15px;
+      right: 45px;
       z-index: 10;
       
       input {
@@ -200,7 +306,7 @@ $main_color: #128DE0;
     }
   }
 
-  .product-zone {
+  .product-zone, .similar-box {
     grid-template-columns: repeat(3, 1fr)
   }
 
@@ -212,13 +318,23 @@ $main_color: #128DE0;
     margin-left: -15px!important;
     margin-right: -15px!important;
   }
+
+  .video {
+    height: 500px;
+  }
+
+  .product-page {
+    .container {
+      display: block;
+    }
+
+    .left {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 992px) {
-  .bread-crumb {
-    padding-top: 60px;
-  }
-
   .category-zone {
     height: auto;
     grid-template-areas: 
@@ -233,8 +349,21 @@ $main_color: #128DE0;
     }
   }
 
-  .product-zone {
+  .product-zone, .similar-box {
     grid-template-columns: repeat(2, 1fr)
+  }
+
+  .video {
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+
+  .product-page {
+    .main {
+      .main-product {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   }
 }
 
@@ -244,9 +373,6 @@ $main_color: #128DE0;
   .category {
     grid-gap: 15px;
 
-    .box-category {
-      padding: 15px;
-    }
   }
 }
 
@@ -267,8 +393,62 @@ $main_color: #128DE0;
       font-size: 14px;
     }
   }
+
+  .category-zone {
+    grid-gap: 15px;
+
+    .box-category {
+      height: 300px;
+
+      span {
+        padding: 10px 10px;
+        width: 160px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .product-zone, .similar-box {
+    grid-gap: 15px;
+  }
+
+  .product-page .main .main-product {
+    grid-column-gap: 15px;
+  }
+
+  .cart-page-product-1 img {
+    float: none;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 390px) {
+  .category-zone {
+    grid-template-areas: "cate-1" "cate-2" "cate-3" "cate-4" "cate-5" "cate-6";
 
+    .box-category {
+      height: 400px;
+    }
+  }
+
+  .product-zone,
+  .product-page .main .main-product,
+  .simlar-box {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .table-price {
+    td.table-img {
+      display: block;
+
+      img {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      h4 a {
+        font-size: 14px;
+      }
+    }
+  }
 }

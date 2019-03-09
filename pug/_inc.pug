@@ -13,6 +13,7 @@ html(lang="en")
     link(rel='stylesheet', href='../css/xzoom.css')
     link(rel='stylesheet', href='../css/magnific-popup.css')
     link(rel='stylesheet', href='../css/animate.min.css')
+    link(rel='stylesheet', href='../css/sweetalert2.min.css')
     link(rel='stylesheet', href='../css/materialdesignicons.min.css')
     link(rel='stylesheet', href='../css/layout.css')
     link(rel='shortcut icon', href='../img/favicon.png')
@@ -91,7 +92,7 @@ html(lang="en")
                 .search
                   .search-btn
                     i.mdi.mdi-magnify
-                  .cart-btn
+                  a(href='gio-hang.html').cart-btn
                     i.mdi.mdi-cart
                     span 10
             
@@ -109,126 +110,7 @@ html(lang="en")
                   i.mdi.mdi-magnify
 
 
-        .cart
-          .cart-header
-            .row
-              .col-2
-                i.mdi.mdi-close.cart-close(title='Đóng')
-              .col-8.text-center
-                h3 GIỎ HÀNG
-              .col-2.text-right
-                i.mdi.mdi-cart
-                span 10
-          .cart-body
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            .box-product-cart
-              img(src='../img/product-1.png')
-              .box-product-cart-detail
-                h5
-                  a(href="chi-tiet-san-pham.html") Mèo thần tài
-                .quantity
-                  button.waves-effect.waves-light -
-                  input(type='number', value='1', min='1')
-                  button.waves-effect.waves-light +
-                h4 500.000 đ
-            
-            
-
-          .cart-footer.text-center
-            a(href="gio-hang.html") vào giỏ hàng
-            a(href="thanh-toan.html") thanh toán
-
-
-
         .overlay-menu
-        .overlay
 
 
         
@@ -236,113 +118,79 @@ html(lang="en")
     block article
     
     block footer
-      //- section.footer
-      //-   .container-fluid
-      //-     .row
-      //-       .col-xl-3.col-lg-4.col-sm-6
-      //-         .footer-1
-      //-           .footer-top-1
-      //-             i.mdi.mdi-phone-classic
-      //-             span
-      //-               h4 Hotline
-      //-               h5 0912 345 678
-      //-           .footer-bottom
-      //-             h4 TRỤ SỞ CHÍNH VÀ nhà máy
-      //-             ul
-      //-               li 
-      //-                 i.mdi.mdi-map-marker-radius
-      //-                 | Số 1, Đường số 2, Phường 3, Quận 4, TP.HCM
-      //-               li 
-      //-                 i.mdi.mdi-phone-in-talk
-      //-                 | 0912 345 786
-      //-               li 
-      //-                 i.mdi.mdi-email
-      //-                 | ctylehuy@gmail.com
-
-      //-       .col-xl-3.col-lg-4.col-sm-6
-      //-         .footer-1
-      //-           .footer-top-1
-      //-             i.mdi.mdi-source-branch
-      //-             span
-      //-               h4 HỆ THỐNG PHÂN PHỐI
-      //-               h5
-      //-                 a(href='#')
-      //-                   | Xem thêm 
-      //-                   i.mdi.mdi-arrow-right
-      //-           .footer-bottom
-      //-             h4 văn phòng đại diện
-      //-             ul
-      //-               li 
-      //-                 i.mdi.mdi-map-marker-radius
-      //-                 | Số 1, Đường số 2, Phường 3, Quận 4, TP.HCM
-      //-               li 
-      //-                 i.mdi.mdi-phone-in-talk
-      //-                 | 0912 345 786
-      //-               li 
-      //-                 i.mdi.mdi-email
-      //-                 | ctylehuy@gmail.com
-
-      //-       .col-xl-3.col-lg-4.col-sm-6
-      //-         .footer-1
-      //-           .footer-top-1
-      //-             i.mdi.mdi-settings
-      //-             span
-      //-               h4 TRUNG TÂM BẢO HÀNH
-      //-               h5
-      //-                 a(href='#')
-      //-                   | Xem thêm 
-      //-                   i.mdi.mdi-arrow-right
-      //-           .footer-bottom
-      //-             h4 danh mục sản phẩm
-      //-             ul
-      //-               li 
-      //-                 a(href='san-pham.html') Dao phay mọng finger LH
-      //-               li 
-      //-                 a(href='san-pham.html') Dao phay mọng finger LH
-      //-               li 
-      //-                 a(href='san-pham.html') Dao phay mọng finger LH
-      //-               li 
-      //-                 a(href='san-pham.html') Dao phay mọng finger LH
-      //-               li 
-      //-                 a(href='san-pham.html') Dao phay mọng finger LH
-      //-               li 
-      //-                 a(href='san-pham.html') Dao phay mọng finger LH
-                    
-      //-       .col-xl-3.col-sm-6.d-xl-block.d-lg-none.d-md-block
-      //-         .footer-2
-      //-           h4 LIÊN KẾT VỚI CHÚNG TÔI
-
-      //-           a(href='#')
-      //-             i.mdi.mdi-facebook-box
-      //-           a(href='#')
-      //-             i.mdi.mdi-twitter-box
-      //-           a(href='#')
-      //-             i.mdi.mdi-google-plus-box
-      //-           a(href='#')
-      //-             i.mdi.mdi-youtube
-
-      //-         .footer-bottom
-      //-           h4 đối tác khách hàng
+      section.footer
+        .container
+          .row
+            .col-lg-3.col-md-4.d-none.d-md-block
+              .info 
+                h4 Lời tựa
                 
-      //-           .owl-carousel.partner-carousel.owl-theme
-      //-             .item
-      //-               img(src='../img/logo.png')
-      //-             .item
-      //-               img(src='../img/logo.png')
-      //-             .item
-      //-               img(src='../img/logo.png')
-      //-             .item
-      //-               img(src='../img/logo.png')
-      //-             .item
-      //-               img(src='../img/logo.png')
+                p Nội thất cao cấp Quý Đại Lộc xin gởi lời chào và lời cảm ơn chân thành đến qúy khách hàng, đối tác đã quan tâm, tín nhiệm lựa chọn sản phẩm Quý Đại Lộc trong thời gian qua. Trong thời đại hiện nay việc xây dựng kiến trúc nội thất và áp dụng các kỹ thuật tiên tiến để có được một sản phẩm…
+
+            .col-lg-3.col-md-4.col-sm-6
+              .contact
+                h4 Thông tin liên hệ
+                h5 CÔNG TY TNHH QUÝ ĐẠI LỘC
+                ul
+                  li
+                    i.mdi.mdi-map-marker-radius
+                    | 41C3, Khu Phố 11, P.Tân Phong, Biên Hòa, Đồng Nai
+                  li
+                    i.mdi.mdi-phone-classic
+                    | 0938 362 336 - 0916.100.558
+                  li
+                    i.mdi.mdi-email
+                    | noithatquydailoc@gmail.com
                   
-              
-      //-     .footer-bot
-      //-       .statis.text-center
-      //-         h4 thống kê truy cập
-      //-         ul
-      //-           li Đang online: 30
-      //-           li Tổng truy cập: 56421
+            .col-lg-3.d-none.d-lg-block
+              .category-footer
+                h4 Danh mục sản phẩm
+                ul
+                  li
+                    a(href='san-pham.html') Trụ cầu thang 
+                  li
+                    a(href='san-pham.html') Cầu thang kính 
+                  li
+                    a(href='san-pham.html') Phụ kiện 
+                  li
+                    a(href='san-pham.html') Cầu thang inox 
+                  li
+                    a(href='san-pham.html') Cầu thang sắt 
+                  li
+                    a(href='san-pham.html') Phòng tắm kính
+                  
+            .col-lg-3.col-md-4.col-sm-6
+              .link
+                h4 Chính sách
+                ul
+                  li
+                    a(href='#') Chính sách và Quy định chung
+                  li
+                    a(href='#') Quy định và hình thức thanh toán
+                  li
+                    a(href='#') Chính sách vận chuyển, giao nhận
+                  li
+                    a(href='#') Chính sách bảo hành
+                  li
+                    a(href='#') Chính sách bảo mật thông tin
+                  li
+                    a(href='#') Chính sách đổi trả hàng và hoàn tiền
+            
+
+          .footer-bot
+            .row
+              .col-sm-10.text-center.text-sm-left
+                h5 Copyright @ 2019 Quy Dai Loc. All Reserved. Designed by Tri Viet
+              .col-sm-2.text-center.text-sm-right
+                a(href='youtube.com')
+                  i.mdi.mdi-youtube
+                a(href='youtube.com')
+                  i.mdi.mdi-facebook-box
+                a(href='youtube.com')
+                  i.mdi.mdi-twitter-box
+                a(href='youtube.com')
+                  i.mdi.mdi-skype
+
                     
             
             
@@ -357,4 +205,5 @@ html(lang="en")
       script(src='../js/wow.min.js')
       script(src='../js/xzoom.min.js')
       script(src='../js/magnific-popup.js')
+      script(src='../js/sweetalert2.min.js')
       script(src='../js/layout.js')

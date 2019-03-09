@@ -129,9 +129,10 @@ $(document).ready(() => {
   });
 
   if (ww < 1200) {
-    let menuParent = $('.menu-down').parent();
+    let menuParent = $('.menu .nav li .mdi').parent()
+    console.log(menuParent);
 
-    menuParent.find('.nav-link').removeAttr('href');
+    menuParent.removeAttr('href');
     
     $(menuParent).click(() => {
       $('.menu-down').addClass('out');
@@ -182,7 +183,6 @@ $(document).ready(() => {
 
   
   $(".quantity button").on("click", function() {
-
     let $button = $(this);
     let oldValue = $button.parent().find("input").val();
   
@@ -196,8 +196,23 @@ $(document).ready(() => {
         newVal = 1;
       }
     }
-  
     $button.parent().find("input").val(newVal);
+  });
+
+  // NOTIFICATION ADD TO CART + WISHLIST
+  $('.custom-cart').click(() => {
+    Swal({
+      title: 'Thông báo',
+      type: 'success',
+      html: 'Bạn đã thêm vào giỏ thành công',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      confirmButtonText:
+        '<a href="gio-hang.html">Vào giỏ hàng</a>',
+      cancelButtonText:
+        'Tiếp tục mua sắm',
+    })
   });
 
 

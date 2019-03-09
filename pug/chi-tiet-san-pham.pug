@@ -1,0 +1,356 @@
+extends _inc
+
+
+block article
+  article
+    section.bread-crumb
+      .container
+        .bc-icons
+          nav(aria-label='breadcrumb')
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href='index.html') Trang chủ
+              li.breadcrumb-item
+                a(href='san-pham.html') Trang chủ
+              li.breadcrumb-item
+                a(href='san-pham.html') Trụ cầu thang
+              li.breadcrumb-item.active QDL06
+    
+    section.product-page
+      .container
+        .left
+          .seller-product
+            h3 sản phẩm bán chạy
+
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-2.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-1.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-2.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-1.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+            
+            .box-product-seller
+              .box-product-seller-img
+                a(href='chi-tiet-san-pham.html', title='Nhấn để chi xem tiết')
+                  img(src='../img/product-2.png')
+              .box-product-seller-detail
+                h4
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                  i.mdi.mdi-star-outline
+                h5
+                  a(href='chi-tiet-san-pham.html') QDL06
+                p 
+                  | 201
+                  span 250.000
+                p 
+                  | 304
+                  span 350.000
+          
+        .main
+          .product-detail
+            .product-detail-1
+              .row
+                .col-md-6
+                  .product-detail-1-img
+                    img(src='../img/product-1.png')
+                
+                .col-md-6
+                  .product-detail-1-detail
+                    h2 Bộ bàn ghế gỗ ABCXYZ
+
+                    h4.price-product
+                      | 201
+                      span 250.000
+                    h4.price-product
+                      | 304
+                      span 350.000
+                      
+                    h5
+                      | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                    .quantity
+                      span Số lượng: 
+                      button.waves-effect.waves-light -
+                      input(type='number', value='1', min='1')
+                      button.waves-effect.waves-light +
+
+                      span Loại: 
+                      select.form-control
+                        option 201
+                        option 304
+
+                      a.custom-cart thêm vào giỏ
+            .product-detail-2
+              .product-detail-2-title
+                ul.nav.nav-tabs.justify-content-center(role='tablist')
+                  li.nav-item
+                    a#desc-1-tab.nav-link.active(data-toggle='tab', href='#desc-1', role='tab', aria-controls='desc-1', aria-selected='true')
+                      | Chi tiết sản phẩm
+              .tab-content
+                #desc-1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='desc-1-tab')
+                  p
+                    | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea maxime laborum tempora iusto odio magnam optio impedit esse aperiam, reiciendis provident quas veritatis libero blanditiis minus alias illo, temporibus ut.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus dolorem et, minus inventore laborum! Dolore, asperiores. Inventore, iste voluptatem quaerat repellendus illum doloribus deserunt ab totam omnis nostrum perspiciatis.
+                  p
+                    | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea maxime laborum tempora iusto odio magnam optio impedit esse aperiam, reiciendis provident quas veritatis libero blanditiis minus alias illo, temporibus ut.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus dolorem et, minus inventore laborum! Dolore, asperiores. Inventore, iste voluptatem quaerat repellendus illum doloribus deserunt ab totam omnis nostrum perspiciatis.
+                  p
+                    | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea maxime laborum tempora iusto odio magnam optio impedit esse aperiam, reiciendis provident quas veritatis libero blanditiis minus alias illo, temporibus ut.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus dolorem et, minus inventore laborum! Dolore, asperiores. Inventore, iste voluptatem quaerat repellendus illum doloribus deserunt ab totam omnis nostrum perspiciatis.
+                  p
+                    | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea maxime laborum tempora iusto odio magnam optio impedit esse aperiam, reiciendis provident quas veritatis libero blanditiis minus alias illo, temporibus ut.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus dolorem et, minus inventore laborum! Dolore, asperiores. Inventore, iste voluptatem quaerat repellendus illum doloribus deserunt ab totam omnis nostrum perspiciatis.
+
+    section.similar
+      .container
+        .title-page
+          h1 Sản phẩm liên quan
+        
+        .similar-box
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          .box-product
+            .box-product-status
+              span MỚI
+            .box-product-img
+              a(href='chi-tiet-san-pham.html')
+                img(src='../img/product-1.png')
+              .box-product-img-custom
+                a.custom-cart(title='Xem vào giỏ')
+                  i.mdi.mdi-cart
+            .box-product-detail.text-center
+              h4
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+                i.mdi.mdi-star-outline
+              h5
+                a(href='chi-tiet-san-pham.html') QDL06
+              h3 
+                span 201 
+                .box-product-detail-price 250.000
+              h3 
+                span 304 
+                .box-product-detail-price 350.000
+
+          
