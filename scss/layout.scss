@@ -660,63 +660,17 @@ $main_color: #128DE0;
     .filter-color {
       margin-bottom: 30px;
 
-      .check-box {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 14px;
-        user-select: none;
-      }
-      
-      .check-box input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-      }
-      
-      .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        border-radius: 3px;
-      }
-      
-      .check-box:hover input ~ .checkmark {
-        background-color: #ccc;
-      }
-      
-      .check-box input:checked ~ .checkmark {
-        background-color: $main_color;
-      }
-      
-      .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-      
-      .check-box input:checked ~ .checkmark:after {
-        display: block;
-      }
-      
-      .check-box .checkmark:after {
-        left: 7px;
-        top: 2px;
-        width: 5px;
-        height: 13px;
-        border: solid #ccc;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-      }
+      ul li {
+        margin-bottom: 15px;
+        font-weight: 500;
 
-      .check-box:hover {
-        color: $main_color;
+        &:hover {
+          color: $main_color;
+        }
+
+        i {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -1151,6 +1105,22 @@ $main_color: #128DE0;
   }
 }
 
+.video-page {
+
+  .box-video {
+    margin-bottom: 30px;
+
+    h5 {
+      height: 60px;
+      margin-top: 15px;
+      
+      a {
+        @include o2;
+        cursor: default;
+      }
+    }
+  }
+}
 
 // --------------------------------------------------------------------
 @import 'media';
